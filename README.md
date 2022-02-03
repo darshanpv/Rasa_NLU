@@ -106,7 +106,7 @@ Line -28 => add CONFIG_FILE parameter with your configuration file that you crea
     * URL https://127.0.0.1:5001/train?domain=banking&locale=en   (assuming your domain is banking and language English)
     * curl command
     ```
-    curl --insecure --location --request POST 'https://127.0.0.1:5001/train?domain=banking&locale=en'
+    $ curl --insecure --location --request POST 'https://127.0.0.1:5001/train?domain=banking&locale=en'
     ```
     * Response - 
 ```    
@@ -125,7 +125,7 @@ Line -28 => add CONFIG_FILE parameter with your configuration file that you crea
     * URL - https://127.0.0.1:5001/predict?domain=banking&locale=en&userUtterance=I want to pay my SBI card    (assuming you domain is banking and language English)
     * curl command
     ```
-    curl --insecure --location --request POST 'https://127.0.0.1:5001/predict?domain=banking&locale=en&userUtterance=I want to pay my SBI card'
+    $ curl --insecure --location --request POST 'https://127.0.0.1:5001/predict?domain=banking&locale=en&userUtterance=I%20want%20to%20pay%20my%20SBI%20card'
     ```
     * Response - 
 ```
