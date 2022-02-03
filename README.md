@@ -26,7 +26,7 @@ $ docker run -it -d -p 5001:5001 --name nlu nlu:latest
 ```sh
 $ docker ps
 ```
-- Attach to docker to see the running logs.
+- Attach terminal to docker to see the running logs.
 ```sh
 $ docker attach nlu
 ```
