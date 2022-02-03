@@ -1,0 +1,7 @@
+Claim,claims
+Debt,debts
+Mobile,phone
+Query,question,clarification
+Help,support,assistance,assist
+book,reserve
+flight,airlines,carriers
