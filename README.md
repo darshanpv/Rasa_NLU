@@ -37,7 +37,7 @@ $ docker attach nlu
 - NLU Engine uses Rasa Open Source that performs intent classification along with entity recognition.
 - You need to provide training data in yaml format. More details can be found in the [documentation][url3]. 
 - You can create your own training data and upload it in /server/training_data/intents folder.
-- Follow the naming convention /<domain/>_/<locale/>.yml where domain is name of function for which you are building your bot. (e.g. travel, hr, finance etc.) and locale is language. e.g. "banking_en.yml" These are used while making REST API call. (explained below)
+- Follow the naming convention domain_locale.yml where domain is name of function for which you are building your bot. (e.g. travel, hr, finance etc.) and locale is language. e.g. "banking_en.yml" These are used while making REST API call. (explained below)
 - Here is a sample training data provided for retail banking scenario for demonstration. (see "/server/training_data/intents/banking_en.md" for more details)
 ```
 version: "3.0"
