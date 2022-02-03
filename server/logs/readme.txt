@@ -1,0 +1,1 @@
+This folder contains the logs which are auto rotated
