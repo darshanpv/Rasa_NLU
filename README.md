@@ -18,17 +18,18 @@ This was implemented and tested on windows 10 – (Windows Subsystem for Linux) 
 ```sh
 $ docker build . -t nlu:latest
 ```
-- Run the docker 
+- Mount the local folder and run the docker (commands are different for mac/linux and windoes users)
 ```sh
-$ docker run -it -d -p 5001:5001 --name nlu nlu:latest
+# for mac/linux
+$ docker run -it -p 5001:5001 -v $(pwd)/server:/root/server/ --name nlu nlu:latest python app.py
+# for windows user
+$ docker run -it -p 5001:5001 -v %cd%/server:/root/server/ --name nlu nlu:latest python app.py
 ```
-- If your installation is successful, you should see the container running using following command
+- If your installation is successful, you should see the running https server with default port of 5001. (ignore uvicorn logging error messages)
+- Since you have mounted local folder , you can make all the changes locally. You need to remove the "nlu" container before you rerun the docker command.
 ```sh
-$ docker ps
-```
-- Attach terminal to docker to see the running logs.
-```sh
-$ docker attach nlu
+$ docker rm nlu
+$ docker run -it -p 5001:5001 -v %cd%/server:/root/server/ --name nlu nlu:latest python app.py
 ```
 - You can now train the model and predict the intent using REST API. Refer below section for REST APIs.
 
